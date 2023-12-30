@@ -45,7 +45,7 @@ export default function Album() {
     console.log(art);
 
     return (
-        <div className="flex flex-col items-center align-center">
+        <div className="flex flex-col items-center gap-20">
             {result && <div className='flex flex-col bg-slate-300 p-2 w-80 cursor-pointer'>
               <div className='text-black'>
                 Name: {result.title}
@@ -54,6 +54,7 @@ export default function Album() {
                 ID: {result.id}
               </div>
           </div>}
+          {art && <img className="w-40 h-40" title={result.title} src={art.images[0].image}></img>}
         </div>
     )
 }
