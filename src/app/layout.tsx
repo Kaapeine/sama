@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { EB_Garamond } from 'next/font/google'
 import './globals.css'
+import Header from '@/components/header'
 
-const inter = Inter({ subsets: ['latin'] })
+const garamond = EB_Garamond({subsets: ["latin"]})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +17,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={garamond.className}>
+        <div className='flex flex-col h-full w-full min-h-screen bg-teal-950 border-0'>
+          <Header />
+          <div className='flex'>
+            {children}
+          </div>
+        </div>
+      </body>
     </html>
   )
 }

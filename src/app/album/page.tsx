@@ -54,7 +54,7 @@ export default function Album() {
                 ID: {result.id}
               </div>
           </div>}
-          {art && <img className="w-40 h-40" title={result.title} src={art.images[0].image}></img>}
+          {art && <img title={result.title} src={art.images[0].image}></img>}
         </div>
     )
 }
